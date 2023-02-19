@@ -41,7 +41,7 @@ function App() {
           <button name="submitBtn" type="submit" value={formik.values.submitBtn} onClick={() => {
             if (formik.errors.submitBtn) {
               return alert('Username should be an email')
-            } else if (formik.errors.pswField && formik.errors.emailField) {
+            } else if (!formik.errors.pswField && !formik.errors.emailField) {
               return alert ('Login Successful!')
             }
           }}
